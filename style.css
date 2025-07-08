@@ -1,0 +1,100 @@
+/* Apply animated gradient background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(-45deg, #1fa2ff, #12d8fa, #a6ffcb, #fbc2eb);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Lottie animated background */
+#lottie-bg {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Main container */
+.container {
+  max-width: 650px;
+  width: 90%;
+  margin: auto;
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Weather icon styling */
+#weatherIcon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+/* Button styles */
+button {
+  min-width: 150px;
+}
+
+.btn-info {
+  color: #fff;
+}
+
+/* Forecast display */
+.card {
+  border-left: 6px solid #007bff;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+}
+
+/* Forecast section title */
+#forecast h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  button {
+    min-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #weatherIcon {
+    width: 80px;
+    height: 80px;
+  }
+}
